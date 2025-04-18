@@ -1,0 +1,52 @@
+/* Modern Gradient & Animations */
+:root {
+    --primary-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    --success-gradient: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+body {
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Gradient Header */
+.bg-gradient-primary {
+    background: var(--primary-gradient);
+    border-radius: 12px;
+}
+
+/* Hover Effects */
+.hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-scale:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Search Box Glow */
+.search-box .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(105, 73, 255, 0.25);
+}
+
+/* Pulse Animation for Demo Button */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.demo-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Modern Table Styling */
+.table {
+    --bs-table-bg: transparent;
+}
+.table th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}

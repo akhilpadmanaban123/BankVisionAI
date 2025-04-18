@@ -34,6 +34,7 @@ BankVision/
 ├── requirements.txt         # Python dependencies
 └── README.md                # Project documentation
 
+
 🛠 Tech Stack
 Category	Technology
 Backend	Python (Flask)

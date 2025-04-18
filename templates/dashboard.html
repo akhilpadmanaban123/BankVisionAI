@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Hero Card -->
+            <div class="card border-0 shadow-lg mt-4 bg-gradient-primary">
+                <div class="card-body p-5 text-white">
+                    <h1 class="display-5 fw-bold mb-3">
+                        <i class="fas fa-comment-dots me-2"></i> BankVision AI
+                    </h1>
+                    <p class="lead mb-4">
+                        Search customers & transactions using simple English. No complex forms needed!
+                    </p>
+                    
+                    <!-- AI Search Box -->
+                    <div class="search-box">
+                        <form id="searchForm" method="POST" action="{{ url_for('search') }}">
+                            <div class="input-group">
+                                <input type="text" class="form-control form-control-lg" 
+                                       name="query" placeholder="E.g., 'Show Arun Kumar from Palakkad branch'">
+                                <button class="btn btn-light" type="submit">
+                                    <i class="fas fa-search"></i> Search
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="row mt-4">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 hover-scale">
+                        <div class="card-body text-center">
+                            <i class="fas fa-user-friends fa-3x text-primary mb-3"></i>
+                            <h5>Find Customers</h5>
+                            <button class="btn btn-sm btn-outline-primary mt-2" 
+                                    onclick="sampleQuery('Show all customers from Kochi branch')">
+                                Try Example
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 hover-scale">
+                        <div class="card-body text-center">
+                            <i class="fas fa-exchange-alt fa-3x text-success mb-3"></i>
+                            <h5>View Transactions</h5>
+                            <button class="btn btn-sm btn-outline-success mt-2" 
+                                    onclick="sampleQuery('Last 5 transactions of Meera')">
+                                Try Example
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 hover-scale">
+                        <div class="card-body text-center">
+                            <i class="fas fa-database fa-3x text-info mb-3"></i>
+                            <h5>Generate Data</h5>
+                            <button class="btn btn-sm btn-outline-info mt-2" 
+                                    data-bs-toggle="modal" data-bs-target="#dataModal">
+                                Demo Mode
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Data Generation Modal -->
+<div class="modal fade" id="dataModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">Generate Sample Data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="sampleDataForm" method="POST" action="{{ url_for('generate_sample_data') }}">
+                    <div class="mb-3">
+                        <label class="form-label">Number of Customers</label>
+                        <input type="range" class="form-range" min="5" max="50" value="10" id="sampleCountSlider">
+                        <div class="d-flex justify-content-between">
+                            <span>5</span>
+                            <strong id="sampleCountValue">10</strong>
+                            <span>50</span>
+                        </div>
+                        <input type="hidden" name="count" id="sampleCount" value="10">
+                    </div>
+                    <button type="submit" class="btn btn-info w-100">
+                        <i class="fas fa-magic me-1"></i> Generate
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

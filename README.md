@@ -75,6 +75,9 @@ Copy
   ```
 DEMO"""
 
+**DB SCHEMA**
+![image](https://github.com/user-attachments/assets/3833fd94-8ee0-4f82-832f-f2e7f8b951d5)
+
 **Introductory page:**
 ![image](https://github.com/user-attachments/assets/e46e15af-c38b-40f9-b465-b7187318159b)
 

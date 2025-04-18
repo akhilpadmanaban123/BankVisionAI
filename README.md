@@ -75,20 +75,23 @@ Copy
   ```
 DEMO"""
 
-Introductory page:
+**Introductory page:**
 ![image](https://github.com/user-attachments/assets/e46e15af-c38b-40f9-b465-b7187318159b)
 
-Showing customer details from a  particular branch:
+**Showing customer details from a  particular branch:**
 ![image](https://github.com/user-attachments/assets/912aa1c9-96d8-41db-a7cb-ed5b06e911b5)
 
-Showing all transactions of john morales
+**Showing all transactions of john morales**
 ![image](https://github.com/user-attachments/assets/e8fa05c1-1f0a-47f8-ad10-5971ddca6afc)
 
+**Show Last 5 transactions of Alex Lund**
+![image](https://github.com/user-attachments/assets/ba5f94c1-33ce-4aa8-bdaa-13aac35570c1)
 
-
-Demonstration of customer details
+**Demonstration of customer details**
 ![image](https://github.com/user-attachments/assets/9b498bc4-dbf8-4027-b8db-eed5fe17d680)
 
+
+_________________________________________________________
 Frontend	HTML5, CSS3, Bootstrap 5
 Deployment	(Optional: Render, Vercel, AWS)
 

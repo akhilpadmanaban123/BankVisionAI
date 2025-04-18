@@ -9,7 +9,7 @@ class Database:
         self.conn = psycopg2.connect(
             dbname="postgres",
             user="postgres.jdsuuvmyrvfvuthrkdll",
-            password="hArRyPoTtEr123$",
+            password="yourpasssssss",
             host="aws-0-ap-south-1.pooler.supabase.com",
             port="5432"
         )

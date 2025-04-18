@@ -68,11 +68,11 @@ Copy
    ```bash
    git clone https://github.com/yourusername/BankVision.git
    cd BankVision
-Install dependencies:
+2. Install dependencies:
 
-bash
-Copy
-pip install -r requirements.txt
+  ```bash
+  pip install -r requirements.txt
+  ```
 DEMO"""
 
 Introductory page:
@@ -82,7 +82,8 @@ Showing customer details from a  particular branch:
 ![image](https://github.com/user-attachments/assets/912aa1c9-96d8-41db-a7cb-ed5b06e911b5)
 
 Showing all transactions of john morales
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/e8fa05c1-1f0a-47f8-ad10-5971ddca6afc)
+
 
 
 Demonstration of customer details

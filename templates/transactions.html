@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0"><i class="fas fa-exchange-alt me-2"></i>Transaction History for {{ customer_name }}</h4>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-sm btn-light">
+                        <i class="fas fa-arrow-left me-1"></i> Back
+                    </a>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Date & Time</th>
+                                <th>Transaction ID</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for tx in transactions %}
+                            <tr>
+                                <td>{{ tx.transaction_date.strftime('%d-%m-%Y %H:%M') }}</td>
+                                <td><small>{{ tx.transaction_id }}</small></td>
+                                <td>
+                                    {{ tx.description }}
+                                    {% if tx.atm_id %}
+                                        <small class="text-muted d-block">ATM: {{ tx.atm_id }}</small>
+                                    {% endif %}
+                                </td>
+                                <td class="{{ 'text-success' if tx.transaction_type == 'credit' else 'text-danger' }}">
+                                    {{ '₹%.2f'|format(tx.amount) }}
+                                    <small class="d-block">{{ tx.transaction_type|title }}</small>
+                                </td>
+                                <td>₹{{ "%.2f"|format(tx.balance_after) }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-sm btn-outline-primary me-2">
+                    <i class="fas fa-download me-1"></i> Download CSV
+                </button>
+                <button class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-print me-1"></i> Print Statement
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -14,7 +14,7 @@ A modern, user-friendly banking portal that allows bank employees to quickly acc
 
 # BankVision: AI-Powered Banking Assistant 🏦✨
 
-![BankVision Banner](static/images/banner.png)
+![BankVision Banner](static/images/logo.png)
 
 A modern, user-friendly banking portal that allows bank employees to quickly access customer information using **natural language queries** powered by Google Gemini AI.
 
@@ -80,6 +80,9 @@ Introductory page:
 
 Showing customer details from a  particular branch:
 ![image](https://github.com/user-attachments/assets/912aa1c9-96d8-41db-a7cb-ed5b06e911b5)
+
+Showing all transactions of john morales
+![Uploading image.png…]()
 
 
 Demonstration of customer details
